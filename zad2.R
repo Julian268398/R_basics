@@ -11,9 +11,10 @@ wspolne <- function(x, y) {
       }
     }
   }
-  print(myset)
+  a = unique(myset)
+  print(a)
 }
 
-a <- c(2, 4, 6 , 8)
-b <- c(1, 2, 3, 4, 5)
+a <- c(2, 2, 2, 3)
+b <- c(2, 2, 3, 3)
 wspolne(a, b)
