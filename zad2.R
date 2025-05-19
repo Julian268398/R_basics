@@ -11,7 +11,7 @@ wspolne <- function(x, y) {
       }
     }
   }
-  a = unique(myset)
+  a <- unique(myset)
   print(a)
 }
 
