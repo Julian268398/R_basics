@@ -1,6 +1,10 @@
 # https://www.rdocumentation.org/packages/Biobase/versions/2.32.0/topics/MultiSet
 
 wspolne <- function(x, y) {
+
+  if (length(x) == 0 || length(y) == 0) {
+    return("There are no elements in the vector")
+  }
   
   myset <- list()
   
@@ -12,9 +16,8 @@ wspolne <- function(x, y) {
     }
   }
   a <- unique(myset)
-  print(a)
+  if (length(a) == 0) {
+    return("No common elements")
+  }
+  return(a)
 }
-
-a <- c(2, 2, 2, 3)
-b <- c(2, 2, 3, 3)
-wspolne(a, b)
