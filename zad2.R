@@ -1,8 +1,13 @@
+# @author: Julian Siwirski
 # https://www.rdocumentation.org/packages/Biobase/versions/2.32.0/topics/MultiSet
 
 wspolne <- function(x, y) {
 
   if (length(x) == 0 || length(y) == 0) {
+    #' Function to find common elements in two vectors
+    #' @param x A vector of elements 
+    #' @param y A second vector of elements
+    #' @return A list of unique common elements between the two vectors.
     return("There are no elements in the vector")
   }
   
