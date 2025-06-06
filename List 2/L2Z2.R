@@ -56,3 +56,11 @@ data <- read.csv("heart_disease_dataset.csv")
 # Odp: Średnia maksymalna częstość akcji serca u zdrowych wynosi około 150, a u chorych około 130. U zdrowych jest większa rozpiętość wartości, a u chorych jest więcej wartości skrajnych.
 
 #5
+x0 <- subset(data, Chest.pain.type == 0)
+x1 <- subset(data, Chest.pain.type == 1)
+x2 <- subset(data, Chest.pain.type == 2)
+x3 <- subset(data, Chest.pain.type == 3)
+barplot(c(nrow(x0), nrow(x1), nrow(x2), nrow(x3)),
+        names.arg = c("No pain", "Atypical Pain", "Pain not angina", "Asymptomatic"),
+        xlab = "Chest Pain Type",
+        ylab = "Number of Patients")
